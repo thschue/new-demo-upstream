@@ -4,6 +4,15 @@ metadata:
     name: ""
 spec:
     stages:
+        - name: dev
+          sequences:
+            - name: artifact-delivery
+              tasks:
+                - name: promotion
+                  properties: null
+                - name: deployment
+                  properties:
+                    deploymentstrategy: user_managed
         - name: hardening
           sequences:
             - name: artifact-delivery
@@ -14,15 +23,6 @@ spec:
                   properties:
                     deploymentstrategy: user_managed
         - name: production
-          sequences:
-            - name: artifact-delivery
-              tasks:
-                - name: promotion
-                  properties: null
-                - name: deployment
-                  properties:
-                    deploymentstrategy: user_managed
-        - name: dev
           sequences:
             - name: artifact-delivery
               tasks:
