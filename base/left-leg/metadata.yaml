@@ -1,0 +1,6 @@
+apiVersion: keptn.sh/v1
+kind: KeptnArtifactMetadata
+spec:
+  version: "0.0.12"
+  project: "podtato-head"
+  overwriteTag: true
